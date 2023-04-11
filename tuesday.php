@@ -15,3 +15,11 @@
     ['name' => 'Donatello', 'color' => 'violet'],
     ['name' => 'Raphael', 'color' => 'rouge'],
  ];
+
+ usort($tmnts, function ($firstVal, $secondVal){
+    return $firstVal < $secondVal ? -1 : 1;
+ });
+
+ foreach($tmnts as $ninja) {
+    echo $ninja['name'] . " a le bandeau " . $ninja['color'] . PHP_EOL;
+ }
